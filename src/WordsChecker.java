@@ -6,11 +6,12 @@ import java.util.Set;
 public class WordsChecker {
     private String text;
     private Set<String> set = new HashSet<>();
-    private String[] words = text.split("\\P{IsAlphabetic}+");
+    private String[] words;
 
 
     public WordsChecker(String text) {
         this.text = text;
+        words = text.split("\\P{IsAlphabetic}+");
         set.addAll(List.of(words));
     }
     public boolean hasWord(String word){
