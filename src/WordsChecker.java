@@ -11,9 +11,9 @@ public class WordsChecker {
 
     public WordsChecker(String text) {
         this.text = text;
+        set.addAll(List.of(words));
     }
     public boolean hasWord(String word){
-        set.addAll(List.of(words));
         return set.contains(word);
     }
     public void printText(){
